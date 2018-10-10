@@ -1,0 +1,56 @@
+.title {
+    font-family: 'Roboto', sans-serif;
+    text-align: center
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.inputArea {
+    display: flex;
+    flex-direction: column;
+    padding-right: 30px;
+    width: 200px;
+    padding-top: 30px;
+}
+
+.inputBox {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.input {
+    width: 120px;
+}
+
+.table {
+    border: 1px solid #bcbcbc
+}
+
+.row {
+    width: 100px;
+    display: inline-flex;
+    padding: 5px;
+}
+
+.sortableRow {
+    cursor: pointer;
+}
+
+.headerColumn {
+    background-color: #d5d5d5;
+}
+
+.sortIcon {
+    height: 15px;
+    padding-top: 1.5px;
+}
+
+.columm:nth-child(odd) {
+    background-color: #f1f1f1;
+}

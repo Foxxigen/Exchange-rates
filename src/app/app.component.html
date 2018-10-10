@@ -1,0 +1,47 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<div class="title">
+  <h1>
+    Exchange Rates
+  </h1>
+</div>
+
+
+<div class="container">
+  <div class="inputArea">
+    <div class="inputBox">
+      <h5>Base:</h5>
+      <select class="input" [(ngModel)]="selectedCurrency">
+        <option *ngFor="let currency of avaliableCurrency" [ngValue]="currency">{{currency}}</option>
+      </select>
+    </div>
+
+    <div class="inputBox">
+      <h5>Date:</h5>
+      <input class="input" [(ngModel)]="selectedDate" type="date">
+    </div>
+
+    <button (click)='onButtonClick()'>Display</button>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr class="headerColumn">
+        <th class="row sortableRow" (click)='onHeaderClick()'>
+          <img class="sortIcon" src="/src/assets/sort_svg.svg">
+          Currency</th>
+        <th class="row">Buy</th>
+        <th class="row">Sell</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="columm" *ngFor="let data of ratesData" [style.color]=[data.Color]>
+        <td class="row"> {{data.Name}} </td>
+        <td class="row"> {{data.BuyValue | number: '1.1-4' }}</td>
+        <td class="row"> {{data.SellValue | number: '1.1-4'}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+</div>
