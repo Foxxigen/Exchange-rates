@@ -43,7 +43,7 @@ export class AppComponent {
   }
 
   public onButtonClick(): void {
-    if (this.selectedDate === '' || this.selectedCurrency === null) alert('Please fill all fields!')
+    if (this.selectedDate === '' || this.selectedCurrency === null) alert('Please fill Date field!')
     else {
       this.apiService.getData(this.selectedDate, this.selectedCurrency).subscribe((data) => {
         this.exchangeData = data;

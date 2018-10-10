@@ -9,7 +9,9 @@ Currencies, that are avaliable to pick from dropdown, are highlighted red. You c
 
 First, run `npm i` or `npm install` in order to download all dependencies.
 
- Then run `ng serve` for a dev server. Navigate to `http://localhost:4200/` to see the aplication. 
+If you don't have angular installed globaly, you can use `npx -p @angular/cli ng serve` to run application.
+
+Else run `ng serve` for a dev server. Then navigate to `http://localhost:4200/` to see the aplication. 
 
 
 
