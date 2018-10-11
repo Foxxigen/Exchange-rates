@@ -39,7 +39,9 @@ export class AppComponent {
     this.apiService.latest().subscribe((data) => {
       this.exchangeData = data;
       this.fillTable(this.exchangeData.rates);
-    });
+    },
+      error => alert(error._body)
+    );
   }
 
   public onButtonClick(): void {
@@ -49,7 +51,9 @@ export class AppComponent {
         this.exchangeData = data;
         this.selectedDate = this.exchangeData.date;
         this.fillTable(this.exchangeData.rates);
-      });
+      },
+        error => alert(error._body)
+      );
     }
   }
 
