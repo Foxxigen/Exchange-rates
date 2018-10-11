@@ -47,6 +47,7 @@ export class AppComponent {
     else {
       this.apiService.getData(this.selectedDate, this.selectedCurrency).subscribe((data) => {
         this.exchangeData = data;
+        this.selectedDate = this.exchangeData.date;
         this.fillTable(this.exchangeData.rates);
       });
     }
