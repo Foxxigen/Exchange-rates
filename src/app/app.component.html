@@ -18,7 +18,7 @@
 
     <div class="inputBox">
       <h5>Date:</h5>
-      <input class="input" [(ngModel)]="selectedDate" type="date">
+      <input [(ngModel)]="selectedDate" type="date">
     </div>
 
     <button (click)='onButtonClick()'>Display</button>
@@ -28,8 +28,8 @@
     <thead>
       <tr class="headerColumn">
         <th class="row sortableRow" (click)='onHeaderClick()'>
-          <img class="sortIcon" src="/src/assets/sort_svg.svg">
-          Currency</th>
+          Currency
+          <img class="sortIcon" src="/assets/sort_svg.svg"></th>
         <th class="row">Buy</th>
         <th class="row">Sell</th>
       </tr>
@@ -37,8 +37,8 @@
     <tbody>
       <tr class="columm" *ngFor="let data of ratesData" [style.color]=[data.Color]>
         <td class="row"> {{data.Name}} </td>
-        <td class="row"> {{data.BuyValue | number: '1.1-4' }}</td>
-        <td class="row"> {{data.SellValue | number: '1.1-4'}}</td>
+        <td class="row"> {{data.BuyValue | number: '1.4-4' }}</td>
+        <td class="row"> {{data.SellValue | number: '1.4-4'}}</td>
       </tr>
     </tbody>
   </table>
